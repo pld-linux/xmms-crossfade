@@ -84,6 +84,6 @@ rm -rf $RPM_BUILD_ROOT
 rm -rf $RPM_BUILD_ROOT
 
 %files
-%doc AUTHORS README TODO
 %defattr(644,root,root,755)
+%doc AUTHORS README TODO
 %attr(755,root,root) %{_libdir}/*
