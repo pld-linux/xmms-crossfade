@@ -64,11 +64,10 @@ Mo¿liwo¶ci xmms-output-crossfade to:
   wtyczkê, np. do normalizacji wraz z wtyczk± icecast.
 
 %prep
-%setup -n xmms-crossfade-%{version} -q
+%setup -q -n xmms-crossfade-%{version}
 %patch0 -p1
 
 %build
-rm -f missing
 %{__libtoolize}
 %{__aclocal}
 %{__autoconf}
