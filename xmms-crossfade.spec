@@ -1,14 +1,14 @@
 Summary:	XMMS Plugin for Crossfading and Continuous Output
 Summary(pl):	Wtyczka do XMMS zapewniaj±ca d¼wiêk bez przerw
 Name:		xmms-output-crossfade
-Version:	0.3.4
+Version:	0.3.5
 Release:	1
 License:	GPL
 Group:		X11/Applications/Sound
-Source0:	http://www.mynetcologne.de/~nc-eisenlpe2/xmms-crossfade/xmms-crossfade-%{version}.tar.gz
-# Source0-md5:	d8569970030ffbbacd549be6585462f3
+Source0:	http://www.eisenlohr.org/xmms-crossfade/xmms-crossfade-%{version}.tar.gz
+# Source0-md5:	34110a1563dadc51e63bb685545ec724
 Patch0:		%{name}-xmms.patch
-URL:		http://www.mynetcologne.de/~nc-eisenlpe2/xmms-crossfade/
+URL:		http://www.eisenlohr.org/xmms-crossfade/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gtk+-devel
@@ -73,7 +73,8 @@ rm -f missing
 %{__aclocal}
 %{__autoconf}
 %{__automake}
-%configure
+%configure \
+	--enable-player=xmms
 %{__make}
 
 %install
