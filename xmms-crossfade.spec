@@ -39,7 +39,7 @@ xmms-output-crossfade features:
   clicks some soundcards produce when suddenly being stopped. Also, it
   can improve quality when seeking within a song.
 - Secondary effect plugin: XMMS-crossfade allows you to select a
-  second effect plugin. This is usefull for example when using the
+  second effect plugin. This is useful for example when using the
   volume normalizing plugin together with the icecast plugin.
 
 %description -l pl
