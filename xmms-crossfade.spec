@@ -34,7 +34,7 @@ xmms-output-crossfade features:
   seamless playback of whole albums without any audible interruption
   between the tracks.
 - Gap-Killer: Removes the short gaps of silence at the beginning
-  and/or end of mp3 files. These gaps are caused by some mp3-encoders.
+  and/or end of MP3 files. These gaps are caused by some MP3-encoders.
 - Automatic detection of live albums: Automatically detects live
   albums and pre-mixed tracks which already are crossfaded. For those
   tracks, crossfading can be disabled automatically.
@@ -53,7 +53,7 @@ Mo¿liwo¶ci xmms-output-crossfade to:
   utworami; w po³±czeniu z Gap-Killerem daje to mo¿liwo¶æ odtworzenia
   ca³ego albumu bez ¿adnej s³yszalnej przerwy
 - Gap-Killer - usuwaj±cy fragmenty ciszy na pocz±tku i koñcu plików
-  mp3 (spowodowane przez niektóre kodery)
+  MP3 (spowodowane przez niektóre kodery)
 - automatyczne wykrywanie albumów koncertowych i pre-miksowanych, na
   których ¶cie¿ki ju¿ maj± p³ynne przej¶cia - dla nich dodawanie
   p³ynnych przej¶æ mo¿e byæ automatycznie wy³±czane
