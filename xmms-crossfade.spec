@@ -5,8 +5,6 @@ Version:	0.2.9
 Release:	3
 License:	GPL
 Group:		X11/Applications/Multimedia
-Group(de):	X11/Applikationen/Multimedia
-Group(pl):	X11/Aplikacje/Multimedia
 Source0:	http://www.netcologne.de/~nc-eisenlpe2/xmms-crossfade/xmms-crossfade-%{version}.tar.gz
 URL:		http://www.netcologne.de/~nc-eisenlpe2/xmms-crossfade/
 Buildrequires:	autoconf
