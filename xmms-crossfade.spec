@@ -4,7 +4,7 @@ Name:		xmms-output-crossfade
 Version:	0.2.9
 Release:	4
 License:	GPL
-Group:		X11/Applications/Multimedia
+Group:		X11/Applications/Sound
 Source0:	http://www.netcologne.de/~nc-eisenlpe2/xmms-crossfade/xmms-crossfade-%{version}.tar.gz
 URL:		http://www.netcologne.de/~nc-eisenlpe2/xmms-crossfade/
 Buildrequires:	autoconf
