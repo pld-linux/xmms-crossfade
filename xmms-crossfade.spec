@@ -3,19 +3,18 @@ Summary(pl):	Wtyczka do XMMS zapewniaj±ca d¼wiêk bez przerw
 Name:		xmms-output-crossfade
 Version:	0.2.9
 Release:	1
+License:	GPL
 Group:		X11/Applications/Multimedia
 Group(de):	X11/Applikationen/Multimedia
 Group(pl):	X11/Aplikacje/Multimedia
-License:	GPL
-URL:		http://www.netcologne.de/~nc-eisenlpe2/xmms-crossfade/
 Source0:	http://www.netcologne.de/~nc-eisenlpe2/xmms-crossfade/xmms-crossfade-%{version}.tar.gz
+URL:		http://www.netcologne.de/~nc-eisenlpe2/xmms-crossfade/
 BuildRequires:	gtk+-devel
 BuildRequires:	xmms-devel
 Requires:	xmms
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
-# bleh
 %define		_libdir		%{_prefix}/lib/xmms/Output
 
 %description
@@ -41,6 +40,24 @@ xmms-output-crossfade features:
 - Secondary effect plugin: XMMS-crossfade allows you to select a
   second effect plugin. This is usefull for example when using the
   volume normalizing plugin together with the icecast plugin.
+
+%description -l pl
+Mo¿liwo¶ci xmms-output-crossface to:
+- p³ynne przechodzenie miêdzy dwoma utworami
+- p³ynne wchodzenie i wyciszanie na pocz±tku i koñcu odtwarzania
+- ci±g³e odtwarzanie d¼wiêku, tak¿e przy przechodzeniu miêdzy
+  utworami; w po³±czeniu z Gap-Killerem daje to mo¿liwo¶æ odtworzenia
+  ca³ego albumu bez ¿adnej s³yszalnej przerwy
+- Gap-Killer - usuwaj±cy fragmenty ciszy na pocz±tku i koñcu plików
+  mp3 (spowodowane przez niektóre kodery)
+- automatyczne wykrywanie albumów koncertowych i pre-miksowanych, na
+  których ¶cie¿ki ju¿ maj± p³ynne przej¶cia - dla nich dodawanie
+  p³ynnych przej¶æ mo¿e byæ automatycznie wy³±czane
+- wysoka jako¶æ - XMMS-crossfade stara siê unikaæ trzasków
+  wystêpuj±cych na niektórych kartach d¼wiêkowych przy zatrzymywaniu
+  odtwarzania
+- wtyczka dodatkowego efektu: XMMS-crossfade pozwala wybraæ dodatkow±
+  wtyczkê, np. do normalizcji wraz z wtyczk± icecast.
 
 %prep
 %setup -n xmms-crossfade-%{version} -q
