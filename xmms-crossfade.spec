@@ -2,7 +2,7 @@ Summary:	XMMS Plugin for Crossfading and Continuous Output
 Summary(pl):	Wtyczka do XMMS zapewniaj±ca d¼wiêk bez przerw
 Name:		xmms-output-crossfade
 Version:	0.2.9
-Release:	3
+Release:	4
 License:	GPL
 Group:		X11/Applications/Multimedia
 Source0:	http://www.netcologne.de/~nc-eisenlpe2/xmms-crossfade/xmms-crossfade-%{version}.tar.gz
@@ -67,7 +67,7 @@ Mo¿liwo¶ci xmms-output-crossfade to:
 %build
 rm -f missing
 %{__libtoolize}
-aclocal
+%{__aclocal}
 %{__autoconf}
 %{__automake}
 %configure
@@ -78,12 +78,10 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} DESTDIR=$RPM_BUILD_ROOT install
 
-gzip -9nf AUTHORS README TODO
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc AUTHORS README TODO
 %attr(755,root,root) %{_libdir}/*
-%doc *.gz
