@@ -9,8 +9,8 @@ Source0:	http://www.mynetcologne.de/~nc-eisenlpe2/xmms-crossfade/xmms-crossfade-
 # Source0-md5:	d8569970030ffbbacd549be6585462f3
 Patch0:		%{name}-xmms.patch
 URL:		http://www.mynetcologne.de/~nc-eisenlpe2/xmms-crossfade/
-Buildrequires:	autoconf
-Buildrequires:	automake
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	gtk+-devel
 BuildRequires:	libtool
 BuildRequires:	rpmbuild(macros) >= 1.125
