@@ -5,9 +5,9 @@ Version:	0.3.2
 Release:	1
 License:	GPL
 Group:		X11/Applications/Sound
-Source0:	http://www.netcologne.de/~nc-eisenlpe2/xmms-crossfade/xmms-crossfade-%{version}.tar.gz
-# Source0-md5:	55b5b76c50c99d9f7871b64a78a3a4bc
-URL:		http://www.netcologne.de/~nc-eisenlpe2/xmms-crossfade/
+Source0:	http://www.mynetcologne.de/~nc-eisenlpe2/xmms-crossfade/xmms-crossfade-%{version}.tar.gz
+# Source0-md5:	384756802307a163839987cbf520076a
+URL:		http://www.mynetcologne.de/~nc-eisenlpe2/xmms-crossfade/
 Buildrequires:	autoconf
 Buildrequires:	automake
 BuildRequires:	gtk+-devel
