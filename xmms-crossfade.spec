@@ -7,6 +7,7 @@ License:	GPL
 Group:		X11/Applications/Sound
 Source0:	http://www.mynetcologne.de/~nc-eisenlpe2/xmms-crossfade/xmms-crossfade-%{version}.tar.gz
 # Source0-md5:	384756802307a163839987cbf520076a
+Patch0:		%{name}-xmms.patch
 URL:		http://www.mynetcologne.de/~nc-eisenlpe2/xmms-crossfade/
 Buildrequires:	autoconf
 Buildrequires:	automake
@@ -64,6 +65,7 @@ Mo¿liwo¶ci xmms-output-crossfade to:
 
 %prep
 %setup -n xmms-crossfade-%{version} -q
+%patch0 -p1
 
 %build
 rm -f missing
