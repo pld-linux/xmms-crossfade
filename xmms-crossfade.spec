@@ -12,7 +12,7 @@ URL:		http://www.mynetcologne.de/~nc-eisenlpe2/xmms-crossfade/
 Buildrequires:	autoconf
 Buildrequires:	automake
 BuildRequires:	gtk+-devel
-Buildrequires:	libtool
+BuildRequires:	libtool
 BuildRequires:	rpmbuild(macros) >= 1.125
 BuildRequires:	xmms-devel
 Requires:	xmms
@@ -61,7 +61,7 @@ Mo¿liwo¶ci xmms-output-crossfade to:
   wystêpuj±cych na niektórych kartach d¼wiêkowych przy zatrzymywaniu
   odtwarzania
 - wtyczka dodatkowego efektu: XMMS-crossfade pozwala wybraæ dodatkow±
-  wtyczkê, np. do normalizcji wraz z wtyczk± icecast.
+  wtyczkê, np. do normalizacji wraz z wtyczk± icecast.
 
 %prep
 %setup -n xmms-crossfade-%{version} -q
