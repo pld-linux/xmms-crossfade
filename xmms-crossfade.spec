@@ -42,7 +42,7 @@ xmms-output-crossfade features:
   volume normalizing plugin together with the icecast plugin.
 
 %description -l pl
-Mo¿liwo¶ci xmms-output-crossface to:
+Mo¿liwo¶ci xmms-output-crossfade to:
 - p³ynne przechodzenie miêdzy dwoma utworami
 - p³ynne wchodzenie i wyciszanie na pocz±tku i koñcu odtwarzania
 - ci±g³e odtwarzanie d¼wiêku, tak¿e przy przechodzeniu miêdzy
