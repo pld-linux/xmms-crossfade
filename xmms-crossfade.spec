@@ -8,7 +8,7 @@ Group(de):	X11/Applikationen/Multimedia
 Group(pl):	X11/Aplikacje/Multimedia
 License:	GPL
 URL:		http://www.netcologne.de/~nc-eisenlpe2/xmms-crossfade/
-Source0:	http://www.netcologne.de/~nc-eisenlpe2/xmms-crossfade/xmms-crossfade-%{name}.tar.gz
+Source0:	http://www.netcologne.de/~nc-eisenlpe2/xmms-crossfade/xmms-crossfade-%{version}.tar.gz
 BuildRequires:	gtk+-devel
 BuildRequires:	xmms-devel
 Requires:	xmms
