@@ -13,6 +13,7 @@ BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gtk+-devel
 BuildRequires:	libtool
+BuildRequires:	libsamplerate-devel
 BuildRequires:	rpmbuild(macros) >= 1.125
 BuildRequires:	xmms-devel
 Requires:	xmms
