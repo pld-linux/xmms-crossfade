@@ -1,0 +1,14 @@
+diff -urN aaa/xmms-crossfade-0.3.2/configure.in xmms-crossfade-0.3.2/configure.in
+--- aaa/xmms-crossfade-0.3.2/configure.in	2003-04-22 07:33:13.000000000 +0200
++++ xmms-crossfade-0.3.2/configure.in	2003-08-05 12:50:34.000000000 +0200
+@@ -31,10 +31,6 @@
+ AC_PROG_CC
+ AC_PROG_CPP
+ AC_PROG_INSTALL
+-AC_PATH_PROG(XMMS,xmms,no)
+-if test "x$XMMS" = "xno"; then
+-  AC_MSG_ERROR([*** xmms not found - please install first ***)])
+-fi
+ AC_PATH_PROG(XMMS_CONFIG,xmms-config,no)
+ if test "x$XMMS_CONFIG" = "xno"; then
+   AC_MSG_ERROR([*** xmms-config not found - please install first (comes with XMMS > 1.0.0) ***
