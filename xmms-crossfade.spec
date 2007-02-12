@@ -1,5 +1,5 @@
 Summary:	XMMS Plugin for Crossfading and Continuous Output
-Summary(pl.UTF-8):   Wtyczka wyjściowa dla XMMS-a zapewniająca dźwięk bez przerw
+Summary(pl.UTF-8):	Wtyczka wyjściowa dla XMMS-a zapewniająca dźwięk bez przerw
 Name:		xmms-output-crossfade
 Version:	0.3.8
 Release:	1
