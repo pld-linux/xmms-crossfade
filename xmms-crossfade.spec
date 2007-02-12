@@ -1,5 +1,5 @@
 Summary:	XMMS Plugin for Crossfading and Continuous Output
-Summary(pl):	Wtyczka wyj¶ciowa dla XMMS-a zapewniaj±ca d¼wiêk bez przerw
+Summary(pl.UTF-8):   Wtyczka wyjÅ›ciowa dla XMMS-a zapewniajÄ…ca dÅºwiÄ™k bez przerw
 Name:		xmms-output-crossfade
 Version:	0.3.8
 Release:	1
@@ -45,23 +45,23 @@ xmms-output-crossfade features:
   second effect plugin. This is useful for example when using the
   volume normalizing plugin together with the icecast plugin.
 
-%description -l pl
-Mo¿liwo¶ci xmms-output-crossfade to:
-- p³ynne przechodzenie miêdzy dwoma utworami
-- p³ynne wchodzenie i wyciszanie na pocz±tku i koñcu odtwarzania
-- ci±g³e odtwarzanie d¼wiêku, tak¿e przy przechodzeniu miêdzy
-  utworami; w po³±czeniu z Gap-Killerem daje to mo¿liwo¶æ odtworzenia
-  ca³ego albumu bez ¿adnej s³yszalnej przerwy
-- Gap-Killer - usuwaj±cy fragmenty ciszy na pocz±tku i koñcu plików
-  MP3 (spowodowane przez niektóre kodery)
-- automatyczne wykrywanie albumów koncertowych i pre-miksowanych, na
-  których ¶cie¿ki ju¿ maj± p³ynne przej¶cia - dla nich dodawanie
-  p³ynnych przej¶æ mo¿e byæ automatycznie wy³±czane
-- wysoka jako¶æ - XMMS-crossfade stara siê unikaæ trzasków
-  wystêpuj±cych na niektórych kartach d¼wiêkowych przy zatrzymywaniu
+%description -l pl.UTF-8
+MoÅ¼liwoÅ›ci xmms-output-crossfade to:
+- pÅ‚ynne przechodzenie miÄ™dzy dwoma utworami
+- pÅ‚ynne wchodzenie i wyciszanie na poczÄ…tku i koÅ„cu odtwarzania
+- ciÄ…gÅ‚e odtwarzanie dÅºwiÄ™ku, takÅ¼e przy przechodzeniu miÄ™dzy
+  utworami; w poÅ‚Ä…czeniu z Gap-Killerem daje to moÅ¼liwoÅ›Ä‡ odtworzenia
+  caÅ‚ego albumu bez Å¼adnej sÅ‚yszalnej przerwy
+- Gap-Killer - usuwajÄ…cy fragmenty ciszy na poczÄ…tku i koÅ„cu plikÃ³w
+  MP3 (spowodowane przez niektÃ³re kodery)
+- automatyczne wykrywanie albumÃ³w koncertowych i pre-miksowanych, na
+  ktÃ³rych Å›cieÅ¼ki juÅ¼ majÄ… pÅ‚ynne przejÅ›cia - dla nich dodawanie
+  pÅ‚ynnych przejÅ›Ä‡ moÅ¼e byÄ‡ automatycznie wyÅ‚Ä…czane
+- wysoka jakoÅ›Ä‡ - XMMS-crossfade stara siÄ™ unikaÄ‡ trzaskÃ³w
+  wystÄ™pujÄ…cych na niektÃ³rych kartach dÅºwiÄ™kowych przy zatrzymywaniu
   odtwarzania
-- wtyczka dodatkowego efektu: XMMS-crossfade pozwala wybraæ dodatkow±
-  wtyczkê, np. do normalizacji wraz z wtyczk± icecast.
+- wtyczka dodatkowego efektu: XMMS-crossfade pozwala wybraÄ‡ dodatkowÄ…
+  wtyczkÄ™, np. do normalizacji wraz z wtyczkÄ… icecast.
 
 %prep
 %setup -q -n xmms-crossfade-%{version}
