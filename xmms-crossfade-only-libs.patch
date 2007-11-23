@@ -1,17 +1,17 @@
-diff -ruN xmms-crossfade-0.3.11./configure.in xmms-crossfade-0.3.11/configure.in
---- xmms-crossfade-0.3.11./configure.in	2006-07-14 11:59:11.000000000 +0200
-+++ xmms-crossfade-0.3.11/configure.in	2007-11-23 20:14:23.010883001 +0100
-@@ -65,9 +65,7 @@
+diff -ruN xmms-crossfade-0.3.13./configure.in xmms-crossfade-0.3.13/configure.in
+--- xmms-crossfade-0.3.13./configure.in	2007-11-21 13:15:20.000000000 +0100
++++ xmms-crossfade-0.3.13/configure.in	2007-11-23 22:06:44.257885223 +0100
+@@ -72,9 +72,7 @@
  
- AC_PATH_PROG(BMP,           beep-media-player, no)
- AC_PATH_PROG(BMP_CONFIG,    beep-config,       no)
+ AC_PATH_PROG(nmpath, nm)
+ 
 -AC_PATH_PROG(XMMS,          xmms,              no)
  AC_PATH_PROG(XMMS_CONFIG,   xmms-config,       no)
 -AC_PATH_PROG(AUDACIOUS,     audacious,         no)
  AC_PATH_PROG(PKG_CONFIG,    pkg-config,        no)
  AC_PATH_PROG(NOXMMS,        noxmms,            no)
  AC_PATH_PROG(NOXMMS_CONFIG, noxmms-config,     no)
-@@ -117,10 +115,6 @@
+@@ -87,10 +85,6 @@
  
  if test "$PLAYER" = xmms
  then
@@ -22,7 +22,7 @@ diff -ruN xmms-crossfade-0.3.11./configure.in xmms-crossfade-0.3.11/configure.in
  	if test "$XMMS_CONFIG" = no
  	then
  		AC_MSG_ERROR([*** xmms-config not found - please install first (comes with XMMS > 1.0.0) ***
-@@ -154,11 +148,6 @@
+@@ -124,11 +118,6 @@
  
  if test "$PLAYER" = audacious
  then
@@ -31,34 +31,22 @@ diff -ruN xmms-crossfade-0.3.11./configure.in xmms-crossfade-0.3.11/configure.in
 -		AC_MSG_ERROR([*** audacious not found - please install first ***])
 -	fi
 -
- 	PLAYER_GTK2=yes
- 	PLAYER_BIN="$AUDACIOUS"
- 	PLAYER_BASENAME="audacious"
-@@ -479,27 +468,6 @@
- AC_FUNC_VPRINTF
- AC_CHECK_FUNCS(select)
+ 	if test "$PKG_CONFIG" == no 
+ 	then
+ 		AC_MSG_ERROR([*** pkg-config not found])
+@@ -495,12 +484,9 @@
+ dnl
+ dnl ###########################################################################
  
--dnl ###########################################################################
--dnl
--dnl Check for output plugin dir
--dnl
--dnl ###########################################################################
--
 -if test ! -d "$libdir"
 -then
 -	AC_MSG_CHECKING(for output plugin dir)
 -	libdir=`$PLAYER_CONFIG_OUTPUT_PLUGIN_DIR`
 -	AC_MSG_RESULT($libdir)
 -fi
--if test ! -d "$libdir"
--then
--	AC_CHECK_FILES("${prefix}/lib/$PLAYER/Output" "${prefix}/lib/$PLAYER/Plugins", [libdir="$ac_dir"])
--fi
--if test ! -d "$libdir"
--then
--	AC_MSG_ERROR([*** No plugin directory found. Use --libdir to specify. ***])
--fi
--
- dnl Output files
- AC_OUTPUT(Makefile xmms-crossfade.spec)
- 
++AC_MSG_CHECKING(for output plugin dir)
++libdir=`$PLAYER_CONFIG_OUTPUT_PLUGIN_DIR`
++AC_MSG_RESULT($libdir)
+ if test ! -d "$libdir"
+ then
+ 	AC_CHECK_FILES("${prefix}/lib/$PLAYER/Output" "${prefix}/lib/$PLAYER/Plugins", [libdir="$ac_dir"])
