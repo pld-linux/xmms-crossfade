@@ -220,7 +220,7 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/xmms
 %endif
 
-%if %{with xmms}
+%if %{with audacious}
 %files -n audacious-output-crossfade
 %defattr(644,root,root,755)
 %doc AUTHORS README ChangeLog
