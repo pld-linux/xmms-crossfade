@@ -1,7 +1,7 @@
 #
 # Conditional build:
-%bcond_without	xmms		# without xmms plugin
 %bcond_without	audacious	# without audacious plugin
+%bcond_without	xmms		# without xmms plugin
 #
 Summary:	Plugin for Crossfading and Continuous Output
 Summary(pl.UTF-8):	Wtyczka wyjściowa zapewniająca dźwięk bez przerw
@@ -14,16 +14,17 @@ Source0:	http://www.eisenlohr.org/xmms-crossfade/%{name}-%{version}.tar.gz
 # Source0-md5:	11a6a5456f83310fc4325806272db78b
 Patch0:		%{name}-only-libs.patch
 URL:		http://www.eisenlohr.org/xmms-crossfade/
-BuildRequires:	audacious-devel
-BuildRequires:	autoconf
+%{?with_audacious:BuildRequires:	audacious-devel >= 1.4.2}
+BuildRequires:	autoconf >= 2.53
 BuildRequires:	automake
 BuildRequires:	gtk+-devel
 BuildRequires:	gtk+2-devel
+BuildRequires:	libsamplerate-devel
 BuildRequires:	libtool
+BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.125
 %{?with_xmms:BuildRequires:	xmms-devel}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
 
 %description
 xmms-crossfade features:
@@ -169,29 +170,25 @@ Możliwości audacious-output-crossfade to:
 %setup -q
 %patch0 -p1
 
-mkdir audacious
-cp -r * audacious/ || /bin/true
-
 %build
-%if %{with xmms}
 %{__libtoolize}
 %{__aclocal}
 %{__autoconf}
 %{__automake}
 
-%configure \
+%if %{with xmms}
+mkdir -p xmms
+cd xmms
+../%configure \
 	--enable-player=xmms
 %{__make}
+cd ..
 %endif
 
 %if %{with audacious}
+mkdir -p audacious
 cd audacious
-%{__libtoolize}
-%{__aclocal}
-%{__autoconf}
-%{__automake}
-
-%configure \
+../%configure \
 	--enable-player=audacious
 %{__make}
 %endif
@@ -200,13 +197,12 @@ cd audacious
 rm -rf $RPM_BUILD_ROOT
 
 %if %{with xmms}
-%{__make} install \
+%{__make} -C xmms install \
 	DESTDIR=$RPM_BUILD_ROOT
 %endif
 
 %if %{with audacious}
-cd audacious
-%{__make} install \
+%{__make} -C audacious install \
 	DESTDIR=$RPM_BUILD_ROOT
 %endif
 
