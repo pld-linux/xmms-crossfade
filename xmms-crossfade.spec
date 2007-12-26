@@ -8,7 +8,7 @@ Summary(pl.UTF-8):	Wtyczka wyjściowa zapewniająca dźwięk bez przerw
 Name:		xmms-crossfade
 Version:	0.3.13
 Release:	1
-License:	GPL
+License:	GPL v2+
 Group:		X11/Applications/Sound
 Source0:	http://www.eisenlohr.org/xmms-crossfade/%{name}-%{version}.tar.gz
 # Source0-md5:	11a6a5456f83310fc4325806272db78b
