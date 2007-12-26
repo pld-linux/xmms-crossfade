@@ -34,7 +34,7 @@ diff -ruN xmms-crossfade-0.3.13./configure.in xmms-crossfade-0.3.13/configure.in
  	if test "$PKG_CONFIG" == no 
  	then
  		AC_MSG_ERROR([*** pkg-config not found])
-@@ -495,12 +484,9 @@
+@@ -495,20 +484,9 @@
  dnl
  dnl ###########################################################################
  
@@ -44,9 +44,17 @@ diff -ruN xmms-crossfade-0.3.13./configure.in xmms-crossfade-0.3.13/configure.in
 -	libdir=`$PLAYER_CONFIG_OUTPUT_PLUGIN_DIR`
 -	AC_MSG_RESULT($libdir)
 -fi
+-if test ! -d "$libdir"
+-then
+-	AC_CHECK_FILES("${prefix}/lib/$PLAYER/Output" "${prefix}/lib/$PLAYER/Plugins", [libdir="$ac_dir"])
+-fi
+-if test ! -d "$libdir"
+-then
+-	AC_MSG_ERROR([*** No plugin directory found. Use --libdir to specify. ***])
+-fi
 +AC_MSG_CHECKING(for output plugin dir)
 +libdir=`$PLAYER_CONFIG_OUTPUT_PLUGIN_DIR`
 +AC_MSG_RESULT($libdir)
- if test ! -d "$libdir"
- then
- 	AC_CHECK_FILES("${prefix}/lib/$PLAYER/Output" "${prefix}/lib/$PLAYER/Plugins", [libdir="$ac_dir"])
+ 
+ dnl Output files
+ AC_OUTPUT(Makefile xmms-crossfade.spec)
