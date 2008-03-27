@@ -6,12 +6,12 @@
 Summary:	Plugin for Crossfading and Continuous Output
 Summary(pl.UTF-8):	Wtyczka wyjściowa zapewniająca dźwięk bez przerw
 Name:		xmms-crossfade
-Version:	0.3.13
+Version:	0.3.14
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications/Sound
 Source0:	http://www.eisenlohr.org/xmms-crossfade/%{name}-%{version}.tar.gz
-# Source0-md5:	11a6a5456f83310fc4325806272db78b
+# Source0-md5:	026c52544c7f3193d384288c9f8296aa
 Patch0:		%{name}-only-libs.patch
 URL:		http://www.eisenlohr.org/xmms-crossfade/
 %{?with_audacious:BuildRequires:	audacious-devel >= 1.4.2}
@@ -220,5 +220,6 @@ rm -rf $RPM_BUILD_ROOT
 %files -n audacious-output-crossfade
 %defattr(644,root,root,755)
 %doc AUTHORS README ChangeLog
-%attr(755,root,root) %{_libdir}/audacious
+%attr(755,root,root) %{_libdir}/audacious/Output/libcrossfade.so
+%attr(755,root,root) %{_libdir}/audacious/Output/libcrossfade.la
 %endif
