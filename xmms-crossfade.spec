@@ -204,6 +204,7 @@ rm -rf $RPM_BUILD_ROOT
 %if %{with audacious}
 %{__make} -C audacious install \
 	DESTDIR=$RPM_BUILD_ROOT
+rm -f $RPM_BUILD_ROOT%{_libdir}/audacious/Output/libcrossfade.la
 %endif
 
 %clean
@@ -221,5 +222,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS README ChangeLog
 %attr(755,root,root) %{_libdir}/audacious/Output/libcrossfade.so
-%attr(755,root,root) %{_libdir}/audacious/Output/libcrossfade.la
 %endif
